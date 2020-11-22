@@ -361,6 +361,24 @@
       ]
     }
   },
+  "users": [
+    {
+      "id": "c420894f-36ba-4cd5-b4f8-1b24bd8c53db",
+      "username": "bruce",
+      "firstName": "Bruce",
+      "lastName": "Lee",
+      "email": "bruce@kung.fu",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": false,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "bruce"
+        }
+      ]
+    }
+  ],
   "groups": [],
   "defaultRoles": [
     "offline_access",
