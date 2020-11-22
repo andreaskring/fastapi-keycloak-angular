@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FastapiService } from '../services/fastapi.service';
+import { User } from '../user';
 
 @Component({
   selector: 'app-something-cool',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SomethingCoolComponent implements OnInit {
 
-  constructor() { }
+  user: User;
+
+  constructor(private fastapiService: FastapiService) { }
 
   ngOnInit(): void {
+    this.getUserMe(); 
+  }
+
+  getUserMe(): void {
+    this.fastapiService.getUserMe()
+    .subscribe(user => this.user = user);
   }
 
 }
