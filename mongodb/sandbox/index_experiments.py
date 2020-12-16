@@ -69,3 +69,9 @@ print('totalDocsExamined:', r['executionStats']['totalDocsExamined'])
 col_users.create_index([('canTeach.name', 1)])
 r = col_users.find({'canTeach.name': 'karate'}).explain()
 print('totalDocsExamined:', r['executionStats']['totalDocsExamined'])
+
+# Perform regex search
+
+r = col_users.find({'canTeach.name': {'$regex': '^k'}})
+for x in r:
+    print(x)
