@@ -63,3 +63,9 @@ r = col_users.insert_many(users)
 
 r = col_users.find({'canTeach.name': 'karate'}).explain()
 print('totalDocsExamined:', r['executionStats']['totalDocsExamined'])
+
+# Documents examined with index
+
+col_users.create_index([('canTeach.name', 1)])
+r = col_users.find({'canTeach.name': 'karate'}).explain()
+print('totalDocsExamined:', r['executionStats']['totalDocsExamined'])
