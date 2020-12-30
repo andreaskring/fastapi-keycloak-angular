@@ -10,7 +10,6 @@ services:
       - type: volume
         source: postgres-volume
         target: /var/lib/postgresql/data
-
   keycloak:
     depends_on:
       - postgres
@@ -34,6 +33,10 @@ services:
       - type: bind
         source: ./keycloak/my-realm.json
         target: /tmp/my-realm.json
+  mongo:
+    image: mongo:4.4.2
+    ports:
+      - 27017:27017
 volumes:
   keycloak-volume:
   postgres-volume:
