@@ -1,0 +1,15 @@
+FROM node:current-alpine as build
+
+WORKDIR /app
+
+COPY ./angular/package.json ./
+COPY ./angular/package-lock.json ./
+RUN npm install
+
+COPY ./angular ./
+RUN npm run build
+
+FROM nginx
+
+COPY ./angular/nginx.conf /etc/nginx/conf.d/angular.conf
+COPY --from=build /app/dist/angular /usr/share/nginx/html

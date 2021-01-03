@@ -12,7 +12,7 @@ function initializeKeycloak(keycloak: KeycloakService) {
   return () =>
     keycloak.init({
       config: {
-        url: 'http://localhost:8080/auth',
+        url: 'https://proxy/auth',
         realm: 'MyRealm',
         clientId: 'MyApp',
       },
