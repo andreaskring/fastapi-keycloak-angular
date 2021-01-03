@@ -2,5 +2,4 @@ python-multipart
 fastapi
 uvicorn
 requests
-pymongo
 
