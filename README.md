@@ -7,6 +7,11 @@ project
 [https://github.com/mauriciovigolo/keycloak-angular](https://github.com/mauriciovigolo/keycloak-angular)
 to handle the Angular part of the Keycloak communication.
 
+## Prerequisites
+* Docker and Docker Compose
+* ... and Python and [Angular CLI](https://cli.angular.io/) to develop
+  stuff further.
+
 ## Running the app
 
 Keycloak likes to speak SSL, so this sandbox application uses self-signed
@@ -35,3 +40,8 @@ do the following:
 1. Open a browser and navigate to `https://proxy/something-cool`. The
    browser will throw some warnings due to the self-signed certificate,
    but you can safely accept these.
+   
+## Disclaimer
+
+This app is not production ready in its current state (e.g. certificate
+verification has been disabled in the Python backend).
