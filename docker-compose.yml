@@ -57,13 +57,13 @@ services:
       - 443:443
     volumes:
       - type: bind
-        source: ./dev-environment/nginx-proxy.conf
+        source: ./proxy/nginx-proxy.conf
         target: /etc/nginx/conf.d/proxy.conf
       - type: bind
-        source: ./dev-environment/app.crt
+        source: ./proxy/app.crt
         target: /etc/ssl/certs/app.crt
       - type: bind
-        source: ./dev-environment/app.key
+        source: ./proxy/app.key
         target: /etc/ssl/private/app.key
 volumes:
   keycloak-volume:

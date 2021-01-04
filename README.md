@@ -27,3 +27,8 @@ do the following:
    ```
    $ docker-compose up -d --build
    ```
+   and give the stack a few moments to fire up. You can follow the logs
+   with
+   ```
+   $ docker-compose -f logs
+   ```
