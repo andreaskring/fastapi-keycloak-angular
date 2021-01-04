@@ -1,5 +1,6 @@
 python-multipart
 fastapi
 uvicorn
+starlette
 requests
 

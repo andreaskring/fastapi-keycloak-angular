@@ -3,23 +3,13 @@ import requests
 from fastapi import Depends, FastAPI
 from fastapi.exceptions import HTTPException
 from fastapi.security import OAuth2PasswordBearer
-from fastapi.middleware.cors import CORSMiddleware
 from starlette.status import (
     HTTP_200_OK,
     HTTP_401_UNAUTHORIZED,
     HTTP_500_INTERNAL_SERVER_ERROR
 )
 
-# origins = ["http://localhost"]
-#
 app = FastAPI()
-# app.add_middleware(
-#     CORSMiddleware,
-#     allow_origins=origins,
-#     allow_credentials=True,
-#     allow_methods=["*"],
-#     allow_headers=["*"]
-# )
 
 REALM = 'MyRealm'
 KEYCLOAK_BASEURL = f'https://proxy/auth/realms' \
@@ -49,6 +39,13 @@ async def auth(token: str = Depends(oauth2_scheme)):
         )
 
 
+# Public endpoint - does not require any authentication
+@app.get('/api/public')
+def hello_world():
+    return {'msg': 'Hello world'}
+
+
+# Protected endpoint - requires a Keycloak JWT token
 @app.get('/api/user/me')
-async def hello_world(user: str = Depends(auth)):
+async def user_me(user: dict = Depends(auth)):
     return user
