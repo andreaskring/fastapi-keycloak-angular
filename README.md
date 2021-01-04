@@ -32,3 +32,6 @@ do the following:
    ```
    $ docker-compose -f logs
    ```
+1. Open a browser and navigate to `https://proxy/something-cool`. The
+   browser will throw some warnings due to the self-signed certificate,
+   but you can safely accept these.
