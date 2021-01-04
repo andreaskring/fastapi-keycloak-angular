@@ -44,4 +44,6 @@ do the following:
 ## Disclaimer
 
 This app is not production ready in its current state (e.g. certificate
-verification has been disabled in the Python backend).
+verification has been disabled in the Python backend, users with
+trivial passwords have been pre-configured, there is no test suite,
+allowed origins are set way too broad,...).
