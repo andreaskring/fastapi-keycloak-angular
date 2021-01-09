@@ -12,7 +12,7 @@ function initializeKeycloak(keycloak: KeycloakService) {
   return () =>
     keycloak.init({
       config: {
-        url: 'https://proxy/auth',
+        url: 'https://app.kring.info/auth',
         realm: 'MyRealm',
         clientId: 'MyApp',
       },

@@ -11,6 +11,6 @@ export class FastapiService {
   constructor(private http: HttpClient) { }
 
   getUserMe(): Observable<User> {
-    return this.http.get<User>('https://proxy/api/user/me');
+    return this.http.get<User>('https://app.kring.info/api/user/me');
   }
 }

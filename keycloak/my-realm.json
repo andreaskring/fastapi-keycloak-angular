@@ -2058,5 +2058,26 @@
   "dockerAuthenticationFlow": "docker auth",
   "attributes": {},
   "keycloakVersion": "11.0.3",
-  "userManagedAccessAllowed": false
+  "userManagedAccessAllowed": false,
+  "identityProviders": [
+    {
+      "alias": "google",
+      "internalId": "b413b860-c14a-4f61-9bac-1e9a7866bcf6",
+      "providerId": "google",
+      "enabled": true,
+      "updateProfileFirstLoginMode": "on",
+      "trustEmail": false,
+      "storeToken": false,
+      "addReadTokenRoleOnCreate": false,
+      "authenticateByDefault": false,
+      "linkOnly": false,
+      "firstBrokerLoginFlowAlias": "first broker login",
+      "config": {
+        "syncMode": "IMPORT",
+        "clientSecret": "GoogleClientSecret",
+        "clientId": "GoogleClientId",
+        "useJwksUrl": "true"
+      }
+    }
+  ]
 }

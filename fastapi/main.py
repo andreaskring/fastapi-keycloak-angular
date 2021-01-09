@@ -12,7 +12,7 @@ from starlette.status import (
 app = FastAPI()
 
 REALM = 'MyRealm'
-KEYCLOAK_BASEURL = f'https://proxy/auth/realms' \
+KEYCLOAK_BASEURL = f'https://app.kring.info/auth/realms' \
                    f'/{REALM}/protocol/openid-connect'
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl=KEYCLOAK_BASEURL + '/token')
