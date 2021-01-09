@@ -23,6 +23,7 @@ services:
       KEYCLOAK_IMPORT: /tmp/my-realm.json
       # KEYCLOAK_LOGLEVEL: DEBUG
       PROXY_ADDRESS_FORWARDING: 'true'
+      KEYCLOAK_FRONTEND_URL: https://proxy/auth
       DB_USER: keycloak
       DB_PASSWORD: keycloak
       DB_ADDR: postgres
