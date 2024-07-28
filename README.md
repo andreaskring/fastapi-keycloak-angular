@@ -1,5 +1,8 @@
 # FastAPI-Keycloak-Angular
 
+(this project is not really being used any more, but check out this
+project instead [https://github.com/andreaskring/bootstrap-keycloak-fastapi-postgres](https://github.com/andreaskring/bootstrap-keycloak-fastapi-postgres))
+
 A small sandbox application that demonstrates Keycloak authentication for a
 backend written in Python using [FastAPI](https://fastapi.tiangolo.com/) and
 a frontend in [Angular](https://angular.io/). This application uses this
